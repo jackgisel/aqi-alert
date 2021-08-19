@@ -1,5 +1,7 @@
 const axios = require('axios')
 const purple = require('purpleair')
+const express = require('express')
+const path = require('path')
 
 const getAQI = async () => {
     try {
@@ -38,8 +40,6 @@ setInterval(async function () {
     }
 }, the_interval)
 
-const express = require('express')
-const path = require('path')
 const PORT = process.env.PORT || 5000
 
 express()
