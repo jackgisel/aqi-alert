@@ -11,7 +11,7 @@ const getAQI = async () => {
         console.error('Error fetching', e)
     }
 }
-const WEBHOOK = env.WEBHOOK
+const WEBHOOK = process.env.WEBHOOK
 
 const postToDiscord = (msg) => {
     axios.post(WEBHOOK, { content: msg }).catch((e) => console.error(e))
